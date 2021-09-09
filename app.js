@@ -7,7 +7,7 @@ todoButton.addEventListener('click', addTodo)
 todoList.addEventListener('click', deleteCheck);
 const filterOption=document.querySelector(".filter-todo");
 filterOption.addEventListener('click', filterTodo);
-document.addEventListener("DOMContentLoaded", getTodos);
+// document.addEventListener("DOMContentLoaded", getTodos);
 
 function addTodo(e) {
   //Prevent natural behaviour
@@ -22,7 +22,7 @@ function addTodo(e) {
   newTodo.classList.add("todo-item");
   todoDiv.appendChild(newTodo);
   todoInput.value=" ";
- //Add todo to local storage
+
 
   //Create Completed Button
   const completedButton = document.createElement("button");
@@ -146,12 +146,4 @@ function removeLocalTodos(todo) {
 }
 
 
-var today = new Date();
-
-var date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear();
-
-var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
-
-var dateTime = date+' '+time;
-document.getElementById("dateTime").innerHTML=dateTime
 
